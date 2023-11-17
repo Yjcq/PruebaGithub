@@ -12,21 +12,22 @@
               </div>
               <div class="card-body" style="padding:30px">
      
-                 {{-- TODO: Abrir el formulario e indicar el método POST --}}
-     
-                 {{-- TODO: Protección contra CSRF --}}
-     
+                 {{-- ARREGLAR RUTA A DONDE ENVIA EL POST --}}
+                 <form action="/catalog/create" method="POST">
+                  @csrf    
                  <div class="form-group">
                     <label for="title">Título</label>
-                    <input type="text" name="title" id="title" class="form-control">
+                    <input type="text" name="title" id="title" class="form-control" placeholder="ingrese el Nombre de la pelicula">
                  </div>
      
                  <div class="form-group">
-                    {{-- TODO: Completa el input para el año --}}
+                  <label for="year">Año</label>
+                  <input type="text" name="Año" id="year" class="form-control" placeholder="ingrese el año de estreno">
                  </div>
      
                  <div class="form-group">
-                    {{-- TODO: Completa el input para el director --}}
+                  <label for="director">Director</label>
+                  <input type="text" name="" id="title" class="form-control" placeholder="ingrese el Director de la pelicula">
                  </div>
      
                  <div class="form-group">

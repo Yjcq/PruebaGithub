@@ -1,6 +1,7 @@
 <?php
-
+use App\Http\Controllers\CatalogController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -23,10 +24,10 @@ Route::get('/logout',function (){
     return 'Logout Usuario';
 });
 
-Route::get('/catalog', [CatalogController::class, 'getHome']);
+Route::get('/catalog', [CatalogController::class, 'getHome'])->
 
-Route::get('/catalog/show/{id}',[CatalogController::class, 'getShow']);
+Route::get('/catalog/show/{id}',[CatalogController::class, 'getShow'])->name('catalog.show');;
 
-Route::get('/catalog/create',[CatalogController::class, 'getCreate']);
+Route::get('/catalog/create',[CatalogController::class, 'getCreate'])->name('catalog.create');
 
-Route::get('/catalog/edit/{id}',[CatalogController::class, 'getEdit']);
+Route::get('/catalog/edit/{id}',[CatalogController::class, 'getEdit'])->name('catalog.edit');;
